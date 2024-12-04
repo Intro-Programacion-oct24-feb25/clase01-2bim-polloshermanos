@@ -25,17 +25,22 @@ public class Ejericio {
         System.out.println("Ingrese el limite de cada tabla");
         limite =entradad.nextInt();
         
-        while (contadorTabla <= tabla) {            
+        while (contadorTabla <= tabla) { 
+            cadena= String.format("%s\nTabla de multiplicar del %d",
+                        cadena,contadorTabla);
             while (contadorLimite <= limite) {   
                 int resultado=contadorTabla*contadorLimite;
-                cadena= String.format("%s\n%d*%d%d=",
+                
+                cadena= String.format("%s\n%d*%d=%d",
                         cadena,
                         contadorTabla,
-                        contadorLimite);
+                        contadorLimite,
+                        resultado);
                 contadorLimite=contadorLimite+1;
             }
-            contadorLimite=0;
+            contadorLimite=1;
             contadorTabla=contadorTabla+1;
         }
+        System.out.println(cadena);
     }
 }
